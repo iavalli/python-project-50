@@ -25,7 +25,7 @@ def compare_files(file_path1, file_path2):
 
 def generate_diff(file_path1, file_path2):
     diff = compare_files(file_path1, file_path2)
-    
+
     diff_lines = [f"{key}: {value}" for key, value in diff.items()]
     return '{\n  ' + '\n  '.join(diff_lines) + '\n}'
 
